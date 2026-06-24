@@ -2644,3 +2644,220 @@ alter table "dev"."main"."mart_sales_by_territory__dbt_tmp" rename to "mart_sale
 [0m19:50:39.378413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A3C3BFE9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A3C377E650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A3C30973F0>]}
 [0m19:50:39.379177 [debug] [MainThread]: Flushing usage events
 [0m19:50:40.252340 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:30:06.615139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA33BE5D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA31528550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA3600BB10>]}
+
+
+============================== 09:30:06.621607 | 3ac8f17f-8cb8-4965-8187-06c23f464b94 ==============================
+[0m09:30:06.621607 [info ] [MainThread]: Running with dbt=1.11.11
+[0m09:30:06.622970 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt docs generate', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Admin\\PyCharmMiscProject\\pharma_pipeline\\logs'}
+[0m09:30:07.087687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3ac8f17f-8cb8-4965-8187-06c23f464b94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA35FE7E10>]}
+[0m09:30:07.151180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3ac8f17f-8cb8-4965-8187-06c23f464b94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA346E79B0>]}
+[0m09:30:07.174688 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m09:30:07.506322 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m09:30:08.815820 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:30:08.816143 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m09:30:08.816341 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:30:08.853663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3ac8f17f-8cb8-4965-8187-06c23f464b94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA365E7C50>]}
+[0m09:30:08.875706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3ac8f17f-8cb8-4965-8187-06c23f464b94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA3623F200>]}
+[0m09:30:08.876149 [info ] [MainThread]: Found 3 models, 1 seed, 7 data tests, 485 macros
+[0m09:30:08.876926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ac8f17f-8cb8-4965-8187-06c23f464b94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA3687E6D0>]}
+[0m09:30:08.879305 [info ] [MainThread]: 
+[0m09:30:08.879972 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:30:08.880615 [info ] [MainThread]: 
+[0m09:30:08.881410 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:30:08.886246 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m09:30:11.417901 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:30:11.418232 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:30:11.418435 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:30:11.457696 [debug] [ThreadPool]: SQL status: OK in 0.039 seconds
+[0m09:30:11.458068 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:30:11.458296 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "pharma_pipeline", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m09:30:11.488514 [debug] [ThreadPool]: SQL status: OK in 0.030 seconds
+[0m09:30:11.490876 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:30:11.503979 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:30:11.504288 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:30:11.505499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ac8f17f-8cb8-4965-8187-06c23f464b94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA36AB1710>]}
+[0m09:30:11.514611 [debug] [Thread-1 (]: Began running node seed.pharma_pipeline.raw_sales
+[0m09:30:11.515061 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.pharma_pipeline.raw_sales'
+[0m09:30:11.515315 [debug] [Thread-1 (]: Began compiling node seed.pharma_pipeline.raw_sales
+[0m09:30:11.519539 [debug] [Thread-1 (]: Began executing node seed.pharma_pipeline.raw_sales
+[0m09:30:11.520020 [debug] [Thread-1 (]: Finished running node seed.pharma_pipeline.raw_sales
+[0m09:30:11.520831 [debug] [Thread-1 (]: Began running node model.pharma_pipeline.stg_sales
+[0m09:30:11.521135 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.pharma_pipeline.raw_sales, now model.pharma_pipeline.stg_sales)
+[0m09:30:11.521391 [debug] [Thread-1 (]: Began compiling node model.pharma_pipeline.stg_sales
+[0m09:30:11.523501 [debug] [Thread-1 (]: Writing injected SQL for node "model.pharma_pipeline.stg_sales"
+[0m09:30:11.524579 [debug] [Thread-1 (]: Began executing node model.pharma_pipeline.stg_sales
+[0m09:30:11.525124 [debug] [Thread-1 (]: Finished running node model.pharma_pipeline.stg_sales
+[0m09:30:11.525780 [debug] [Thread-1 (]: Began running node model.pharma_pipeline.int_sales_incremental
+[0m09:30:11.526054 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.pharma_pipeline.stg_sales, now model.pharma_pipeline.int_sales_incremental)
+[0m09:30:11.526285 [debug] [Thread-1 (]: Began compiling node model.pharma_pipeline.int_sales_incremental
+[0m09:30:11.528013 [debug] [Thread-1 (]: Writing injected SQL for node "model.pharma_pipeline.int_sales_incremental"
+[0m09:30:11.529151 [debug] [Thread-1 (]: Began executing node model.pharma_pipeline.int_sales_incremental
+[0m09:30:11.529937 [debug] [Thread-1 (]: Finished running node model.pharma_pipeline.int_sales_incremental
+[0m09:30:11.530298 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063
+[0m09:30:11.530601 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.pharma_pipeline.int_sales_incremental, now test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063)
+[0m09:30:11.530892 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063
+[0m09:30:11.539711 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063"
+[0m09:30:11.541509 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063
+[0m09:30:11.542053 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063
+[0m09:30:11.542347 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00
+[0m09:30:11.542649 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.pharma_pipeline.accepted_values_stg_sales_product__DrugA__DrugB.18b50f6063, now test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00)
+[0m09:30:11.542917 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00
+[0m09:30:11.550145 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00"
+[0m09:30:11.551798 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00
+[0m09:30:11.552367 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00
+[0m09:30:11.552656 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.not_null_stg_sales_product.490368e704
+[0m09:30:11.552939 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.pharma_pipeline.not_null_stg_sales_cumulative_units.19722fef00, now test.pharma_pipeline.not_null_stg_sales_product.490368e704)
+[0m09:30:11.553167 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.not_null_stg_sales_product.490368e704
+[0m09:30:11.556336 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.not_null_stg_sales_product.490368e704"
+[0m09:30:11.558213 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.not_null_stg_sales_product.490368e704
+[0m09:30:11.558783 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.not_null_stg_sales_product.490368e704
+[0m09:30:11.559057 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561
+[0m09:30:11.559301 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.pharma_pipeline.not_null_stg_sales_product.490368e704, now test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561)
+[0m09:30:11.559525 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561
+[0m09:30:11.563106 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561"
+[0m09:30:11.564190 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561
+[0m09:30:11.564731 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561
+[0m09:30:11.565015 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca
+[0m09:30:11.565271 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.pharma_pipeline.not_null_stg_sales_territory.72f0b13561, now test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca)
+[0m09:30:11.565499 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca
+[0m09:30:11.570330 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca"
+[0m09:30:11.571342 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca
+[0m09:30:11.571903 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca
+[0m09:30:11.572174 [debug] [Thread-1 (]: Began running node model.pharma_pipeline.mart_sales_by_territory
+[0m09:30:11.572427 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.pharma_pipeline.not_null_stg_sales_week.3e4b7d01ca, now model.pharma_pipeline.mart_sales_by_territory)
+[0m09:30:11.572653 [debug] [Thread-1 (]: Began compiling node model.pharma_pipeline.mart_sales_by_territory
+[0m09:30:11.574408 [debug] [Thread-1 (]: Writing injected SQL for node "model.pharma_pipeline.mart_sales_by_territory"
+[0m09:30:11.575118 [debug] [Thread-1 (]: Began executing node model.pharma_pipeline.mart_sales_by_territory
+[0m09:30:11.575871 [debug] [Thread-1 (]: Finished running node model.pharma_pipeline.mart_sales_by_territory
+[0m09:30:11.576252 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278
+[0m09:30:11.576619 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.pharma_pipeline.mart_sales_by_territory, now test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278)
+[0m09:30:11.576969 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278
+[0m09:30:11.580462 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278"
+[0m09:30:11.582059 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278
+[0m09:30:11.582598 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278
+[0m09:30:11.582886 [debug] [Thread-1 (]: Began running node test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7
+[0m09:30:11.583172 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.pharma_pipeline.not_null_int_sales_incremental_weekly_units.795ff9b278, now test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7)
+[0m09:30:11.583408 [debug] [Thread-1 (]: Began compiling node test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7
+[0m09:30:11.603832 [debug] [Thread-1 (]: Writing injected SQL for node "test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7"
+[0m09:30:11.604840 [debug] [Thread-1 (]: Began executing node test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7
+[0m09:30:11.605390 [debug] [Thread-1 (]: Finished running node test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7
+[0m09:30:11.607781 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:30:11.608069 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m09:30:11.608247 [debug] [MainThread]: Connection 'test.pharma_pipeline.not_null_mart_sales_by_territory_territory_revenue_share_pct.ab0dd3cbd7' was properly closed.
+[0m09:30:11.609922 [debug] [MainThread]: Command end result
+[0m09:30:11.680351 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\manifest.json
+[0m09:30:11.701062 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\semantic_manifest.json
+[0m09:30:11.708770 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\run_results.json
+[0m09:30:11.917078 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m09:30:11.917406 [info ] [MainThread]: Building catalog
+[0m09:30:11.925793 [debug] [ThreadPool]: Acquiring new duckdb connection 'dev.information_schema'
+[0m09:30:11.930825 [debug] [ThreadPool]: Using duckdb connection "dev.information_schema"
+[0m09:30:11.931103 [debug] [ThreadPool]: On dev.information_schema: BEGIN
+[0m09:30:11.931299 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:30:11.931923 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m09:30:11.932187 [debug] [ThreadPool]: Using duckdb connection "dev.information_schema"
+[0m09:30:11.932605 [debug] [ThreadPool]: On dev.information_schema: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "pharma_pipeline", "target_name": "dev", "connection_name": "dev.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'dev'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'dev'
+    )
+    select
+        'dev' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        NULL as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m09:30:11.966250 [debug] [ThreadPool]: SQL status: OK in 0.033 seconds
+[0m09:30:11.968400 [debug] [ThreadPool]: On dev.information_schema: ROLLBACK
+[0m09:30:11.969018 [debug] [ThreadPool]: Failed to rollback 'dev.information_schema'
+[0m09:30:11.969246 [debug] [ThreadPool]: On dev.information_schema: Close
+[0m09:30:11.979345 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\catalog.json
+[0m09:30:12.001603 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\manifest.json
+[0m09:30:12.004782 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\semantic_manifest.json
+[0m09:30:12.005057 [info ] [MainThread]: Catalog written to C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\target\catalog.json
+[0m09:30:12.005838 [debug] [MainThread]: Command `dbt docs generate` succeeded at 09:30:12.005743 after 5.57 seconds
+[0m09:30:12.006071 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m09:30:12.006254 [debug] [MainThread]: Connection 'dev.information_schema' was properly closed.
+[0m09:30:12.006479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA36BF2D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA37E9BA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA37E20520>]}
+[0m09:30:12.006726 [debug] [MainThread]: Flushing usage events
+[0m09:30:13.241698 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:32:43.607863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7684E5D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D765E2C690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76A8B79D0>]}
+
+
+============================== 09:32:43.613916 | 4b3629b1-c3c8-4a65-a634-26073fc9be19 ==============================
+[0m09:32:43.613916 [info ] [MainThread]: Running with dbt=1.11.11
+[0m09:32:43.614715 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Admin\\PyCharmMiscProject\\pharma_pipeline\\logs'}
+[0m09:32:44.009850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b3629b1-c3c8-4a65-a634-26073fc9be19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76A94E650>]}
+[0m09:32:44.077156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b3629b1-c3c8-4a65-a634-26073fc9be19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D768FE79B0>]}
+[0m09:41:48.282523 [error] [MainThread]: Encountered an error:
+
+[0m09:41:48.486477 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\cli\main.py", line 309, in docs_serve
+    results = task.run()
+  File "C:\Users\Admin\PyCharmMiscProject\.venv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\selectors.py", line 314, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\selectors.py", line 305, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m09:41:48.507135 [debug] [MainThread]: Command `dbt docs serve` failed at 09:41:48.505122 after 545.21 seconds
+[0m09:41:48.519363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76AC95F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76AC96050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76AC91040>]}
+[0m09:41:48.526697 [debug] [MainThread]: Flushing usage events
+[0m09:41:49.580224 [debug] [MainThread]: An error was encountered while trying to flush usage events
