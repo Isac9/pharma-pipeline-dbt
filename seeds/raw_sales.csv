@@ -1,0 +1,17 @@
+week,territory,product,cumulative_units,cumulative_revenue_usd
+1,Abidjan Nord,DrugA,120,6000
+1,Abidjan Sud,DrugA,85,4250
+1,Abidjan Nord,DrugB,200,12000
+1,Abidjan Sud,DrugB,150,9000
+2,Abidjan Nord,DrugA,310,15500
+2,Abidjan Sud,DrugA,190,9500
+2,Abidjan Nord,DrugB,450,27000
+2,Abidjan Sud,DrugB,320,19200
+3,Abidjan Nord,DrugA,530,26500
+3,Abidjan Sud,DrugA,310,15500
+3,Abidjan Nord,DrugB,700,42000
+3,Abidjan Sud,DrugB,500,30000
+4,Abidjan Nord,DrugA,800,40000
+4,Abidjan Sud,DrugA,460,23000
+4,Abidjan Nord,DrugB,980,58800
+4,Abidjan Sud,DrugB,710,42600

@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."raw_sales" ("week" integer,"territory" text,"product" text,"cumulative_units" integer,"cumulative_revenue_usd" integer)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."raw_sales" FROM 'C:\Users\Admin\PyCharmMiscProject\pharma_pipeline\seeds\raw_sales.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

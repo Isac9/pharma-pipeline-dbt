@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_sales
+    description: "Cleaned pharmaceutical sales data — cumulative weekly figures per territory and product"
+    columns:
+      - name: week
+        description: "Week number"
+        data_tests:
+          - not_null
+      - name: territory
+        description: "Sales territory"
+        data_tests:
+          - not_null
+      - name: product
+        description: "Product name"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                  values: [ 'DrugA', 'DrugB' ]
+      - name: cumulative_units
+        description: "Cumulative units sold since week 1"
+        data_tests:
+          - not_null
+
+  - name: int_sales_incremental
+    description: "Weekly incremental sales — Week N = Cumulative N minus Cumulative N-1"
+    columns:
+      - name: weekly_units
+        description: "Actual units sold during the week"
+        data_tests:
+          - not_null
+
+  - name: mart_sales_by_territory
+    description: "Final mart — weekly and cumulative sales by territory with market share"
+    columns:
+      - name: territory_revenue_share_pct
+        description: "Territory share of weekly revenue per product"
+        data_tests:
+          - not_null
